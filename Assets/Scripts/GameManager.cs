@@ -1,33 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehavior
+public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
-
-    public GameState State;
-
-    void Awake()
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
     {
-        Instance = this;
-    }
-
-    public void ChangeState(GameState newState)
-    {
-        State = newState;
         
-        switch (newState)
-        {
-        }
     }
-}
 
-public enum GameState
-{
-    TitleScreen,
-    Tutorial,
-    MainGame,
-    LoseScreen,
-    WinScreen
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }
