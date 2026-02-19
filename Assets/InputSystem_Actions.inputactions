@@ -1,7 +1,36 @@
 {
     "version": 1,
     "name": "InputSystem_Actions",
-    "maps": [],
+    "maps": [
+        {
+            "name": "MouseControl",
+            "id": "9355e3c7-a0c2-4215-ac78-908e449f590e",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "2bf335e3-bc40-42b1-8a16-5b3d268e746d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f30cf748-06ef-4207-a6ee-3112a5c2be00",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
     "controlSchemes": [
         {
             "name": "Keyboard&Mouse",
