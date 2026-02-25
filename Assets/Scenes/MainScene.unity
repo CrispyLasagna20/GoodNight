@@ -185,8 +185,8 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9a21f39f-17fc-4e5d-85ec-c617e827a8ae
     m_ActionName: 'MouseControl/Drag[/Mouse/rightButton]'
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: MouseControl
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -780,8 +780,8 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 9a21f39f-17fc-4e5d-85ec-c617e827a8ae
     m_ActionName: 'MouseControl/Drag[/Mouse/rightButton]'
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: MouseControl
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
