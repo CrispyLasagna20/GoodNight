@@ -43,7 +43,7 @@
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
+                    "groups": "",
                     "action": "Drag",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -54,7 +54,7 @@
                     "path": "<Mouse>/middleButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
+                    "groups": "",
                     "action": "Drag",
                     "isComposite": false,
                     "isPartOfComposite": false
