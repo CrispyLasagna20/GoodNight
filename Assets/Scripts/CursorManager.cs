@@ -18,7 +18,6 @@ public class CursorManager : MonoBehaviour
     {
         cursorHotSpot = new Vector2(cursorDefault.width, cursorDefault.height);
         Cursor.SetCursor(cursorDefault, cursorHotSpot, CursorMode.Auto);
-
         click = InputSystem.actions.FindAction("Click");
     }
 
@@ -31,8 +30,7 @@ public class CursorManager : MonoBehaviour
 
         else if (click.WasReleasedThisFrame())
         {
-                Cursor.SetCursor(cursorDefault, cursorHotSpot, CursorMode.Auto);
+            Cursor.SetCursor(cursorDefault, cursorHotSpot, CursorMode.Auto);
         }
     }
 }
-    
