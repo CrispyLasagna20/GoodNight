@@ -6,7 +6,7 @@ public class AnomalyFunction : MonoBehaviour
 
     void Start()
     {
-        gameObject.GetComponent<SpriteRenderer>().sprite = anomalyArray[1];
+        gameObject.GetComponent<SpriteRenderer>().sprite = anomalyArray[Random.Range(1,anomalyArray.Length)];
     }
 
     // Update is called once per frame
