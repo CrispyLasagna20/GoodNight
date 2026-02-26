@@ -2,16 +2,44 @@ using UnityEngine;
 
 public class AnomalyFunction : MonoBehaviour
 {
-    public Sprite[] anomalyArray;
+    public Sprite[] anomalySprites;
+    private float timer;
+    private float timeout = 5f;
+    private bool canSpawn;
 
     void Start()
     {
-        gameObject.GetComponent<SpriteRenderer>().sprite = anomalyArray[Random.Range(1,anomalyArray.Length)];
+        canSpawn = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (canSpawn)
+        {
+            timer += Time.deltaTime;
+        }
+        if (timer > timeout)
+        {
+            SpawnAnomaly();
+        }
+    }
+    public void SpawnAnomaly()
+    {
+        gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[Random.Range(1,anomalySprites.Length)];
+        canSpawn = false;
+        print("spawned == can't spawn");
+        timer = 0f;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        canSpawn = false;
+        print("collision == can't spawn");
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        canSpawn = true;
+        print("no collision == can spawn");
     }
 }
