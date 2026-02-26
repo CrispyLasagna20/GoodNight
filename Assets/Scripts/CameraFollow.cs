@@ -38,14 +38,13 @@ public class CameraFollow : MonoBehaviour
     {
         if (ctx.started) mouseOrigin = GetMousePosition;
         isDragging = ctx.started || ctx.performed;
-        print(isDragging);
     }
 
     private void LateUpdate()
     {
         if (!isDragging) return;
 
-        theDifference = GetMousePosition - transform.position;
+        theDifference = GetMousePosition - transform.position; //transform.position - GetMousePosition; //
         targetPosition = mouseOrigin - theDifference;
         targetPosition = GetCameraBounds();
         transform.position = targetPosition;
