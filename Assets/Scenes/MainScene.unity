@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: f2202b3c74026e847ac514b1e7e1e55f, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -179,15 +179,15 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 2bf335e3-bc40-42b1-8a16-5b3d268e746d
-    m_ActionName: 'MouseControl/Click[/Mouse/leftButton]'
+    m_ActionId: 9e500562-0aa1-431d-af6b-6ad80d0c4e3f
+    m_ActionName: 'MainGame/Click[/Mouse/leftButton]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 9a21f39f-17fc-4e5d-85ec-c617e827a8ae
-    m_ActionName: 'MouseControl/Drag[/Mouse/rightButton]'
+    m_ActionId: ae5a42df-ebc5-4e96-b881-43eaf0181e14
+    m_ActionName: 'MainGame/Drag[/Mouse/middleButton,/Mouse/rightButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 9355e3c7-a0c2-4215-ac78-908e449f590e
+  m_DefaultActionMap: MainGame
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &262938224
@@ -747,7 +747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: f2202b3c74026e847ac514b1e7e1e55f, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -762,8 +762,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 2bf335e3-bc40-42b1-8a16-5b3d268e746d
-    m_ActionName: 'MouseControl/Click[/Mouse/leftButton]'
+    m_ActionId: 9e500562-0aa1-431d-af6b-6ad80d0c4e3f
+    m_ActionName: 'MainGame/Click[/Mouse/leftButton]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1172270338}
@@ -778,11 +778,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 9a21f39f-17fc-4e5d-85ec-c617e827a8ae
-    m_ActionName: 'MouseControl/Drag[/Mouse/rightButton]'
+    m_ActionId: ae5a42df-ebc5-4e96-b881-43eaf0181e14
+    m_ActionName: 'MainGame/Drag[/Mouse/middleButton,/Mouse/rightButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: MouseControl
+  m_DefaultActionMap: MainGame
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1660057539 &9223372036854775807

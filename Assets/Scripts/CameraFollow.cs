@@ -5,8 +5,8 @@ public class CameraFollow : MonoBehaviour
 {
     //variables
     private Camera mainCamera;
-    private Vector3 origin;
-    private Vector3 difference;
+    private Vector3 mouseOrigin;
+    private Vector3 theDifference;
     private Vector3 targetPosition;
     private Bounds cameraBounds;
     private bool isDragging;
@@ -36,16 +36,17 @@ public class CameraFollow : MonoBehaviour
 
     public void OnDrag(InputAction.CallbackContext ctx)
     {
-        if (ctx.started) origin = GetMousePosition;
+        if (ctx.started) mouseOrigin = GetMousePosition;
         isDragging = ctx.started || ctx.performed;
+        print(isDragging);
     }
 
     private void LateUpdate()
     {
         if (!isDragging) return;
 
-        difference = GetMousePosition - transform.position;
-        targetPosition = origin - difference;
+        theDifference = GetMousePosition - transform.position;
+        targetPosition = mouseOrigin - theDifference;
         targetPosition = GetCameraBounds();
         transform.position = targetPosition;
     }
