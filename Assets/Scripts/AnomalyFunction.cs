@@ -5,12 +5,8 @@ public class AnomalyFunction : MonoBehaviour
     public Sprite[] anomalySprites;
     private float timer;
     private float timeout = 5f;
-    private bool canSpawn;
-
-    void Start()
-    {
-        canSpawn = true;
-    }
+    private bool canSpawn = true;
+    private bool viewing = false;
 
     void Update()
     {
@@ -18,7 +14,7 @@ public class AnomalyFunction : MonoBehaviour
         {
             timer += Time.deltaTime;
         }
-        if (timer > timeout)
+        if (timer > timeout && !viewing)
         {
             SpawnAnomaly();
         }
@@ -27,19 +23,28 @@ public class AnomalyFunction : MonoBehaviour
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[Random.Range(1,anomalySprites.Length)];
         canSpawn = false;
-        print("spawned == can't spawn");
+        //print("spawned == can't spawn");
         timer = 0f;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        canSpawn = false;
-        print("collision == can't spawn");
+        viewing = true;
+        //print("collision == can't spawn");
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        canSpawn = true;
-        print("no collision == can spawn");
+        viewing = false;
+        //print("no collision == can spawn");
+    }
+
+    public void OnMouseDown()
+    {
+        if (!canSpawn)
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[0];
+            canSpawn = true;
+        }
     }
 }
