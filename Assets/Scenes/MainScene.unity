@@ -238,15 +238,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AnomalyFunction
   anomalySprites:
   - {fileID: 0}
-  - {fileID: -8482610751115905730, guid: 879c058e1542dce4da54bf4d0f7ddb5e, type: 3}
-  - {fileID: -4759702459391102124, guid: a705dbdedcaf8204abff202239995ef5, type: 3}
-  - {fileID: 7667529468802807063, guid: 79a3123a3d1053d4893fbafb51e622e3, type: 3}
-  - {fileID: 5647903993332858136, guid: 64a7ee4b47263b348a09ac8c4a750e04, type: 3}
-  - {fileID: -3710358660570980651, guid: 735dc6de226ac25489760317ba053178, type: 3}
-  - {fileID: -3333862703398743938, guid: d1af1aae98f4dcf498fb4cad540014d6, type: 3}
-  - {fileID: -8677035944477083225, guid: d9b3b0a57b172a9459014c5b8c9e2534, type: 3}
   - {fileID: 5264241852422494879, guid: 63a19e4b688013349a9939fed928d794, type: 3}
+  - {fileID: -4759702459391102124, guid: a705dbdedcaf8204abff202239995ef5, type: 3}
+  - {fileID: -8482610751115905730, guid: 879c058e1542dce4da54bf4d0f7ddb5e, type: 3}
+  - {fileID: -3333862703398743938, guid: d1af1aae98f4dcf498fb4cad540014d6, type: 3}
+  - {fileID: 5647903993332858136, guid: 64a7ee4b47263b348a09ac8c4a750e04, type: 3}
+  - {fileID: 7667529468802807063, guid: 79a3123a3d1053d4893fbafb51e622e3, type: 3}
+  - {fileID: -8677035944477083225, guid: d9b3b0a57b172a9459014c5b8c9e2534, type: 3}
   - {fileID: -1586665270457797215, guid: 3a2527b3bfa450d47992be53c661c526, type: 3}
+  - {fileID: -3710358660570980651, guid: 735dc6de226ac25489760317ba053178, type: 3}
+  stress: 0
 --- !u!4 &544068732
 Transform:
   m_ObjectHideFlags: 0

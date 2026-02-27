@@ -2,11 +2,26 @@ using UnityEngine;
 
 public class AnomalyFunction : MonoBehaviour
 {
+    //sprites
     public Sprite[] anomalySprites;
+    //timer
     private float timer;
     private float timeout = 5f;
+    //spawning
     private bool canSpawn = true;
     private bool viewing = false;
+    public int stress = 0;
+    private int lowMax;
+    private int midMax;
+    private int highMax;
+
+    void Start()
+    {
+        //sets stress range max index
+        lowMax = (anomalySprites.Length - 1) / 3;
+        midMax = ((anomalySprites.Length - 1) / 3) * 2;
+        highMax = ((anomalySprites.Length - 1) / 3) * 3;
+    }
 
     void Update()
     {
@@ -19,9 +34,22 @@ public class AnomalyFunction : MonoBehaviour
             SpawnAnomaly();
         }
     }
+
     public void SpawnAnomaly()
     {
-        gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[Random.Range(1,anomalySprites.Length)];
+        if (stress == 0)
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[Random.Range(midMax + 1, highMax + 1)];
+        }
+        if (stress == 1)
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[Random.Range(lowMax+1, midMax+1)];
+        }
+        if (stress == 2)
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[Random.Range(1, lowMax + 1)];
+        }
+
         canSpawn = false;
         //print("spawned == can't spawn");
         timer = 0f;
@@ -41,7 +69,6 @@ public class AnomalyFunction : MonoBehaviour
 
     public void OnMouseDown()
     {
-        print("CLICK DETECTED");
         if (!canSpawn)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[0];
