@@ -41,6 +41,7 @@ public class AnomalyFunction : MonoBehaviour
 
     public void OnMouseDown()
     {
+        print("CLICK DETECTED");
         if (!canSpawn)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[0];
