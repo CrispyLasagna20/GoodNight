@@ -10,7 +10,7 @@ public class AnomalyFunction : MonoBehaviour
     //spawning
     private bool canSpawn = true;
     private bool viewing = false;
-    public int stress = 0;
+    private int stress = 0;
     private int lowMax;
     private int midMax;
     private int highMax;
@@ -34,6 +34,26 @@ public class AnomalyFunction : MonoBehaviour
             SpawnAnomaly();
         }
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        viewing = true;
+        //print("collision == can't spawn");
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        viewing = false;
+        //print("no collision == can spawn");
+    }
+
+    public void OnMouseDown()
+    {
+        if (!canSpawn)
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[0];
+            canSpawn = true;
+        }
+    }
 
     public void SpawnAnomaly()
     {
@@ -55,24 +75,12 @@ public class AnomalyFunction : MonoBehaviour
         timer = 0f;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void UpdateStress(int newStress)
     {
-        viewing = true;
-        //print("collision == can't spawn");
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        viewing = false;
-        //print("no collision == can spawn");
-    }
-
-    public void OnMouseDown()
-    {
-        if (!canSpawn)
-        {
-            gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[0];
-            canSpawn = true;
-        }
+        stress = newStress;
+        //print("Stress Updated");
     }
 }
+
+
+//UPDATE ANOMALY COUNT FOR MANAGER FROM HERE NEXT
