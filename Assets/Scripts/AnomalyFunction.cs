@@ -25,6 +25,7 @@ public class AnomalyFunction : MonoBehaviour
 
     void Update()
     {
+        //checks if spawning anomaly criteria is met
         if (canSpawn)
         {
             timer += Time.deltaTime;
@@ -34,29 +35,33 @@ public class AnomalyFunction : MonoBehaviour
             SpawnAnomaly();
         }
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
+        //disallows spawning since in view
         viewing = true;
-        //print("collision == can't spawn");
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        //allows spawning once out of view
         viewing = false;
-        //print("no collision == can spawn");
     }
 
     public void OnMouseDown()
     {
+        //resets anomaly if present
         if (!canSpawn)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[0];
             canSpawn = true;
+            this.transform.parent.GetComponent<AnomalyManager>().UpdateCount(-1);
         }
     }
 
     public void SpawnAnomaly()
     {
+        //spawns certain anomaly depending on stress
         if (stress == 0)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[Random.Range(midMax + 1, highMax + 1)];
@@ -69,18 +74,15 @@ public class AnomalyFunction : MonoBehaviour
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[Random.Range(1, lowMax + 1)];
         }
-
+        //updates other stuff
+        this.transform.parent.GetComponent<AnomalyManager>().UpdateCount(1);
         canSpawn = false;
-        //print("spawned == can't spawn");
         timer = 0f;
     }
 
     public void UpdateStress(int newStress)
     {
+        //updates stress dependent on manager stress
         stress = newStress;
-        //print("Stress Updated");
     }
 }
-
-
-//UPDATE ANOMALY COUNT FOR MANAGER FROM HERE NEXT
