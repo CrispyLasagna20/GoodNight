@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 63dde5de34cb17244a7e201dda7838c4
+guid: 4752dc0beacfd7347965bd902a2c28b5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6263426629651027002
-    second: GoodNightRoom 1_0
+      213: 7990754990619487163
+    second: PinkElephantCarpet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GoodNightRoom 1_0
+      name: PinkElephantCarpet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 400
-        height: 208
+        y: 3
+        width: 128
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a345219a5592ce650800000000000000
-      internalID: 6263426629651027002
+      spriteID: bbbed0fb35dd4ee60800000000000000
+      internalID: 7990754990619487163
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GoodNightRoom 1_0: 6263426629651027002
+      PinkElephantCarpet_0: 7990754990619487163
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

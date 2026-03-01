@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 63dde5de34cb17244a7e201dda7838c4
+guid: 6adbd8bd2ec42e24893e7751b5b1b3f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6263426629651027002
-    second: GoodNightRoom 1_0
+      213: 2759143839929100969
+    second: TopPurpleGlassFireplace_0
+  - first:
+      213: -1416467871044795428
+    second: TopPurpleGlassFireplace_1
+  - first:
+      213: 2452589844549700076
+    second: TopPurpleGlassFireplace_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GoodNightRoom 1_0
+      name: TopPurpleGlassFireplace_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 7
         y: 0
-        width: 400
-        height: 208
+        width: 12
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a345219a5592ce650800000000000000
-      internalID: 6263426629651027002
+      spriteID: 9aa6e2f24b27a4620800000000000000
+      internalID: 2759143839929100969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TopPurpleGlassFireplace_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 35
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd30f9ed9f1b75ce0800000000000000
+      internalID: -1416467871044795428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TopPurpleGlassFireplace_2
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 0
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce98d102879590220800000000000000
+      internalID: 2452589844549700076
       vertices: []
       indices: 
       edges: []
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GoodNightRoom 1_0: 6263426629651027002
+      TopPurpleGlassFireplace_0: 2759143839929100969
+      TopPurpleGlassFireplace_1: -1416467871044795428
+      TopPurpleGlassFireplace_2: 2452589844549700076
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

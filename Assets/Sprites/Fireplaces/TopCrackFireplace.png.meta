@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 63dde5de34cb17244a7e201dda7838c4
+guid: 1050ea124ed6615408b495dc139b299e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6263426629651027002
-    second: GoodNightRoom 1_0
+      213: -3748833497950320276
+    second: TopCrackFireplace_0
+  - first:
+      213: -5207875638468885595
+    second: TopCrackFireplace_1
+  - first:
+      213: 458239663648253391
+    second: TopCrackFireplace_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GoodNightRoom 1_0
+      name: TopCrackFireplace_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 7
         y: 0
-        width: 400
-        height: 208
+        width: 12
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a345219a5592ce650800000000000000
-      internalID: 6263426629651027002
+      spriteID: c690698bbc779fbc0800000000000000
+      internalID: -3748833497950320276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TopCrackFireplace_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 35
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a3c6a603b8e9b7b0800000000000000
+      internalID: -5207875638468885595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TopCrackFireplace_2
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 0
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc5afb5db8efb5600800000000000000
+      internalID: 458239663648253391
       vertices: []
       indices: 
       edges: []
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GoodNightRoom 1_0: 6263426629651027002
+      TopCrackFireplace_0: -3748833497950320276
+      TopCrackFireplace_1: -5207875638468885595
+      TopCrackFireplace_2: 458239663648253391
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

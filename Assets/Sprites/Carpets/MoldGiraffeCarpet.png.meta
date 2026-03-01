@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 63dde5de34cb17244a7e201dda7838c4
+guid: dbc83549769431248bdef0200cf1dd13
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6263426629651027002
-    second: GoodNightRoom 1_0
+      213: 555811082974276186
+    second: MoldGiraffeCarpet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GoodNightRoom 1_0
+      name: MoldGiraffeCarpet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 400
-        height: 208
+        y: 3
+        width: 128
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a345219a5592ce650800000000000000
-      internalID: 6263426629651027002
+      spriteID: a5a28e23c33a6b700800000000000000
+      internalID: 555811082974276186
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GoodNightRoom 1_0: 6263426629651027002
+      MoldGiraffeCarpet_0: 555811082974276186
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

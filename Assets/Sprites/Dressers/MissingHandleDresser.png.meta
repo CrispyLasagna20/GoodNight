@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 63dde5de34cb17244a7e201dda7838c4
+guid: b1e0ba30ad4f32f458db432e36f7277d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6263426629651027002
-    second: GoodNightRoom 1_0
+      213: -856535879890867630
+    second: MissingHandleDresser_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GoodNightRoom 1_0
+      name: MissingHandleDresser_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 5
         y: 0
-        width: 400
-        height: 208
+        width: 53
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a345219a5592ce650800000000000000
-      internalID: 6263426629651027002
+      spriteID: 25a6ab5c729fc14f0800000000000000
+      internalID: -856535879890867630
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GoodNightRoom 1_0: 6263426629651027002
+      MissingHandleDresser_0: -856535879890867630
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
