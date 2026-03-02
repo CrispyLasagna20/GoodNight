@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2abe4d7a912ec0f48a8054df8ac62a95
+guid: 59da39bed43fd304c97009bd84e968c4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1389396426767139163
-    second: MissingStripeBlanketBed_0
+      213: -7437894011520933966
+    second: LessTopBooksBookcase_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MissingStripeBlanketBed_0
+      name: LessTopBooksBookcase_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 6
         y: 0
-        width: 138
-        height: 32
+        width: 53
+        height: 58
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5107a550b0284310800000000000000
-      internalID: 1389396426767139163
+      spriteID: 2bf1a4eddca47c890800000000000000
+      internalID: -7437894011520933966
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 21e8542e870ac1c459a6cf2ef20f3ef0
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MissingStripeBlanketBed_0: 1389396426767139163
+      LessTopBooksBookcase_0: -7437894011520933966
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

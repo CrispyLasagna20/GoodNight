@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2abe4d7a912ec0f48a8054df8ac62a95
+guid: 3c99cbfba107a3348a2b01f12728c02a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1389396426767139163
-    second: MissingStripeBlanketBed_0
+      213: 1635859978887373443
+    second: NoLampTable_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MissingStripeBlanketBed_0
+      name: NoLampTable_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 11
         y: 0
-        width: 138
-        height: 32
+        width: 74
+        height: 44
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5107a550b0284310800000000000000
-      internalID: 1389396426767139163
+      spriteID: 3822cdfcbfdb3b610800000000000000
+      internalID: 1635859978887373443
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 21e8542e870ac1c459a6cf2ef20f3ef0
+    spriteID: b5f20b4f63d50e245adf039c6a7c730d
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MissingStripeBlanketBed_0: 1389396426767139163
+      NoLampTable_0: 1635859978887373443
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
