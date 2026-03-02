@@ -6,9 +6,9 @@ public class AnomalyFunction : MonoBehaviour
     public Sprite[] anomalySprites;
     //timer
     private float timer;
-    private float timeout = 5f;
+    private float timeout;
     //spawning
-    private bool canSpawn = true;
+    private bool canSpawn = false;
     private bool viewing = false;
     private int stress = 0;
     private int lowMax;
@@ -50,12 +50,17 @@ public class AnomalyFunction : MonoBehaviour
 
     public void OnMouseDown()
     {
+        if (canSpawn)
+        {
+            this.transform.parent.GetComponent<AnomalyManager>().UpdatePenalty(1);
+        }
+
         //resets anomaly if present
         if (!canSpawn)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[0];
-            canSpawn = true;
             this.transform.parent.GetComponent<AnomalyManager>().UpdateCount(-1);
+            SetupTimer(Random.Range(7.0f, 20.0f));
         }
     }
 
@@ -64,11 +69,11 @@ public class AnomalyFunction : MonoBehaviour
         //spawns certain anomaly depending on stress
         if (stress == 0)
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[Random.Range(midMax + 1, highMax + 1)];
+            gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[Random.Range(1, highMax + 1)];  //[Random.Range(midMax + 1, highMax + 1)];
         }
         if (stress == 1)
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[Random.Range(lowMax+1, midMax+1)];
+            gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[Random.Range(1, midMax + 1)];  //[Random.Range(lowMax+1, midMax+1)];
         }
         if (stress == 2)
         {
@@ -84,5 +89,11 @@ public class AnomalyFunction : MonoBehaviour
     {
         //updates stress dependent on manager stress
         stress = newStress;
+    }
+
+    public void SetupTimer(float timeoutOffset)
+    {
+        timeout = timeoutOffset;
+        canSpawn = true;
     }
 }
