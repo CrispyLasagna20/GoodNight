@@ -60,15 +60,17 @@ public class AnomalyManager : MonoBehaviour
             LoseTimer -= Time.deltaTime;
             if (LoseTimer <= 0)
             {
-                Time.timeScale = 0;
-                print("YOU JUST LOST THE GAME");
+                //Time.timeScale = 0;
+                //print("YOU JUST LOST THE GAME");
+                GameManager.instance.ChangeSceneTo("LoseScreen");
             }
         }
         WinTimer -= Time.deltaTime;
         if (WinTimer <= 0)
         {
-            Time.timeScale = 0;
-            print("YIPEE YOU WIN");
+            //Time.timeScale = 0;
+            //print("YIPEE YOU WIN");
+            GameManager.instance.ChangeSceneTo("WinScreen");
         }
     }
 

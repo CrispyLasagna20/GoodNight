@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: ee0882d41db895a4781ce6e64bdebbb0
+  - enabled: 1
     path: Assets/Scenes/MainGame.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/LoseScreen.unity
+    guid: 5cf8dbe3c4de6c241be5ae3cb1245122
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: ad6c5969c037b194e94d821b72650cb1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
