@@ -4,17 +4,18 @@ public class AnomalyManager : MonoBehaviour
 {
     //anomalies
     public GameObject[] anomalyObjects;
-    public int anomalyCount;
+    [SerializeField] private int anomalyCount;
     private bool needsUpdate = false;
     private bool stressChanged = false;
-    public int stress = 0;
+    [SerializeField] private int stress = 0;
     private int lowMax = 4;
     private int midMin = 5;
     private int midMax = 8;
     private int highMin = 9;
-    public int globalPenalty = 0;
-    public float EndTimer = 15;
-    private bool runEndTimer = false;
+    [SerializeField] private int globalPenalty = 0;
+    [SerializeField] private float LoseTimer = 15;
+    private bool runLoseTimer = false;
+    [SerializeField] private float WinTimer = 180;
 
     void Start()
     {
@@ -54,14 +55,20 @@ public class AnomalyManager : MonoBehaviour
             }
             needsUpdate = false;
         }
-        if (runEndTimer)
+        if (runLoseTimer)
         {
-            EndTimer -= Time.deltaTime;
-            if (EndTimer <= 0)
+            LoseTimer -= Time.deltaTime;
+            if (LoseTimer <= 0)
             {
                 Time.timeScale = 0;
                 print("YOU JUST LOST THE GAME");
             }
+        }
+        WinTimer -= Time.deltaTime;
+        if (WinTimer <= 0)
+        {
+            Time.timeScale = 0;
+            print("YIPEE YOU WIN");
         }
     }
 
@@ -70,8 +77,8 @@ public class AnomalyManager : MonoBehaviour
         //updates count and checks if stress needs updated
         anomalyCount += count;
         needsUpdate = true;
-        if ((anomalyCount + globalPenalty) >= anomalyObjects.Length) runEndTimer = true;
-        else runEndTimer = false;
+        if ((anomalyCount + globalPenalty) >= anomalyObjects.Length) runLoseTimer = true;
+        else runLoseTimer = false;
     }
 
     public void UpdatePenalty(int penalty)
