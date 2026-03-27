@@ -15,13 +15,13 @@ public class AnomalyManager : MonoBehaviour
     [SerializeField] private int globalPenalty = 0;
     [SerializeField] private float LoseTimer = 15;
     private bool runLoseTimer = false;
-    [SerializeField] private float WinTimer = 180;
+    [SerializeField] private float WinTimer = 190; //3 mintues + 10 second grace period
 
     void Start()
     {
         for (int i = 0; i < anomalyObjects.Length; i++)
         {
-            anomalyObjects[i].GetComponent<AnomalyFunction>().SetupTimer(Random.Range(7.0f, 30.0f));
+            anomalyObjects[i].GetComponent<AnomalyFunction>().SetupTimer(Random.Range(10.0f, 40.0f));
         }
     }
 
