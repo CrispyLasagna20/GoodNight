@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AnomalyManager : MonoBehaviour
 {
-    //anomalies
+    //anomaly management
     public GameObject[] anomalyObjects;
     [SerializeField] private int anomalyCount;
     private bool needsUpdate = false;
@@ -13,15 +13,19 @@ public class AnomalyManager : MonoBehaviour
     private int midMax = 8;
     private int highMin = 9;
     [SerializeField] private int globalPenalty = 0;
+    
+    //win & lose timer
     [SerializeField] private float LoseTimer = 15;
     private bool runLoseTimer = false;
     [SerializeField] private float WinTimer = 190; //3 mintues + 10 second grace period
+    public GameObject clock;
 
     void Start()
     {
         for (int i = 0; i < anomalyObjects.Length; i++)
         {
             anomalyObjects[i].GetComponent<AnomalyFunction>().SetupTimer(Random.Range(10.0f, 40.0f));
+            clock.GetComponent<ClockManager>().ClockUpdate(0);
         }
     }
 
@@ -72,19 +76,42 @@ public class AnomalyManager : MonoBehaviour
             //print("YIPEE YOU WIN");
             GameManager.instance.ChangeSceneTo("WinScreen");
         }
+        else if (WinTimer < 60)
+        {
+            clock.GetComponent<ClockManager>().ClockUpdate(3);
+
+        }
+        else if (WinTimer < 120)
+        {
+            clock.GetComponent<ClockManager>().ClockUpdate(2);
+
+        }
+        else if (WinTimer < 180)
+        {
+            clock.GetComponent<ClockManager>().ClockUpdate(1);
+
+        }
     }
 
     public void UpdateCount(int count)
     {
         //updates count and checks if stress needs updated
         anomalyCount += count;
-        needsUpdate = true;
-        if ((anomalyCount + globalPenalty) >= anomalyObjects.Length) runLoseTimer = true;
-        else runLoseTimer = false;
+        RunUpdate();
     }
 
     public void UpdatePenalty(int penalty)
     {
+        //adds penalty and checks if stress needs updated
         globalPenalty += penalty;
+        RunUpdate();
+    }
+
+    public void RunUpdate()
+    {
+        //enables a check for stress level & starts LoseTimer if count exceeds high min
+        needsUpdate = true;
+        if ((anomalyCount + globalPenalty) >= highMin) runLoseTimer = true;
+        else runLoseTimer = false;
     }
 }

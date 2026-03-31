@@ -50,6 +50,7 @@ public class AnomalyFunction : MonoBehaviour
 
     public void OnMouseDown()
     {
+        //gives penalty due to no anomaly present
         if (canSpawn)
         {
             this.transform.parent.GetComponent<AnomalyManager>().UpdatePenalty(1);
