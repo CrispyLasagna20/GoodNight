@@ -7,6 +7,7 @@ public class AnomalyManager : MonoBehaviour
     [SerializeField] private int anomalyCount;
     private bool needsUpdate = false;
     private bool stressChanged = false;
+    [SerializeField] private GameObject stressVisuals;
     [SerializeField] private int stress = 0;
     private int lowMax = 4;
     private int midMin = 5;
@@ -56,6 +57,7 @@ public class AnomalyManager : MonoBehaviour
                 {
                     anomalyObjects[i].GetComponent<AnomalyFunction>().UpdateStress(stress);
                 }
+                stressVisuals.GetComponent<StressVisuals>().UpdateAnimation(stress);
             }
             needsUpdate = false;
         }
