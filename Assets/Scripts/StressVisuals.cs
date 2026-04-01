@@ -7,21 +7,23 @@ public class StressVisuals : MonoBehaviour
 {
     private int prevLevel = 0;
     private int curLevel = 0;
-    public Sprite[] mainProgression;
-    public Sprite[] stressLoops;
+    //public Sprite[] mainProgression;
+    //public Sprite[] stressLoops;
     //private Sprite[] animationQueue;
-    private Queue<Sprite> animationQueue;
+    private Queue<Sprite> animationQueue = new Queue<Sprite>();
     private bool updateNeeded = false;
     //each stress transition
-    private Queue<Sprite> anim0To1;
-    private Queue<Sprite> anim1To2;
-    private Queue<Sprite> anim2To1;
-    private Queue<Sprite> anim1To0;
+    public Sprite[] anim0To1;
+    public Sprite[] anim1To2;
+    public Sprite[] anim2To1;
+    public Sprite[] anim1To0;
     //each stress loop
-    private Queue<Sprite> stress1Loop;
-    private Queue<Sprite> stress2Loop;
+    public Sprite[] stress1Loop;
+    public Sprite[] stress2Loop;
+    //ending transition
+    public Sprite[] anim2To3;
     //animation timing
-    private float frameOffset = 0.5f;
+    private float frameOffset = 0.15f;
     private float frameTimer = 0;
 
     void Start()
@@ -34,9 +36,11 @@ public class StressVisuals : MonoBehaviour
         //runs an animation of stress changes
         if (updateNeeded)
         {
+            //only updates timer when an animation would be playing
             frameTimer += Time.deltaTime;
+           
+            //print("running update/animation");
 
-            print("running update/animation");
             //plays new frame each time frameOffset is surpassed
             if (frameTimer > frameOffset)
             {
@@ -47,8 +51,30 @@ public class StressVisuals : MonoBehaviour
             //diables animation running once queue empty
             if (animationQueue.Count == 0)
             {
-                updateNeeded = false;
+                if (curLevel == 1)
+                {
+                    foreach (Sprite frame in stress1Loop)
+                    {
+                        animationQueue.Enqueue(frame);
+                    }
+                }
+                else if (curLevel == 2)
+                {
+                    foreach (Sprite frame in stress2Loop)
+                    {
+                        animationQueue.Enqueue(frame);
+                    }
+                }
+                else if (curLevel == 3)
+                {
+                    GameManager.instance.ChangeSceneTo("LoseScreen");
+                }
+                else
+                {
+                    updateNeeded = false;
+                }   
             }
+
         }
     }
 
@@ -57,11 +83,12 @@ public class StressVisuals : MonoBehaviour
         prevLevel = curLevel;
         curLevel = newLevel;
 
-        print("Stress Level == " + curLevel);
+        //print("Stress Level == " + curLevel);
 
         //stress goes up
         if (curLevel > prevLevel)
         {
+            //print("stress went up");
             //up to stress 1
             if (curLevel == 1)
             {
@@ -78,11 +105,19 @@ public class StressVisuals : MonoBehaviour
                     animationQueue.Enqueue(frame);
                 }
             }
+            else if (curLevel == 3)
+            {
+                foreach (Sprite frame in anim2To3)
+                {
+                    animationQueue.Enqueue(frame);
+                }
+            }
         }
 
         //stress goes down
         else if (curLevel < prevLevel)
         {
+            //print("stress went down");
             //down to stress 1
             if (curLevel == 1)
             {
@@ -100,9 +135,7 @@ public class StressVisuals : MonoBehaviour
                 }
             }
         }
-        print(animationQueue);
+        //print(animationQueue);
         updateNeeded = true;
     }
 }
-
-//add something that automatically fills queues on start

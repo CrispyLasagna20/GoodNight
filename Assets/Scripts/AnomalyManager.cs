@@ -68,7 +68,7 @@ public class AnomalyManager : MonoBehaviour
             {
                 //Time.timeScale = 0;
                 //print("YOU JUST LOST THE GAME");
-                GameManager.instance.ChangeSceneTo("LoseScreen");
+                stressVisuals.GetComponent<StressVisuals>().UpdateAnimation(3);
             }
         }
         WinTimer -= Time.deltaTime;
@@ -104,8 +104,13 @@ public class AnomalyManager : MonoBehaviour
 
     public void UpdatePenalty(int penalty)
     {
-        //adds penalty and checks if stress needs updated
+        //adds penalty
         globalPenalty += penalty;
+        //increase stressVisual alpha with each new penalty
+        Color tempColor = stressVisuals.GetComponent<SpriteRenderer>().color;
+        tempColor.a += 0.05f;
+        stressVisuals.GetComponent<SpriteRenderer>().color = tempColor;
+        //checks if stress needs updated
         RunUpdate();
     }
 
@@ -113,7 +118,7 @@ public class AnomalyManager : MonoBehaviour
     {
         //enables a check for stress level & starts LoseTimer if count exceeds high min
         needsUpdate = true;
-        if ((anomalyCount + globalPenalty) >= highMin) runLoseTimer = true;
+        if (anomalyCount >= (highMin - globalPenalty)) runLoseTimer = true;
         else runLoseTimer = false;
     }
 }
