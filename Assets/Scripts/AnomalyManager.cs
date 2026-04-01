@@ -17,6 +17,7 @@ public class AnomalyManager : MonoBehaviour
     
     //win & lose timer
     [SerializeField] private float LoseTimer = 15;
+    private bool loseActivated = false;
     private bool runLoseTimer = false;
     [SerializeField] private float WinTimer = 190; //3 mintues + 10 second grace period
     public GameObject clock;
@@ -32,7 +33,7 @@ public class AnomalyManager : MonoBehaviour
 
     void Update()
     {
-        if (needsUpdate)
+        if (needsUpdate && !loseActivated)
         {
             //changes stress depending on anomaly count
             if (stress != 0 && anomalyCount == (lowMax - globalPenalty))
@@ -64,15 +65,16 @@ public class AnomalyManager : MonoBehaviour
         if (runLoseTimer)
         {
             LoseTimer -= Time.deltaTime;
-            if (LoseTimer <= 0)
+            if (LoseTimer <= 0 && !loseActivated)
             {
                 //Time.timeScale = 0;
                 //print("YOU JUST LOST THE GAME");
+                loseActivated = true;
                 stressVisuals.GetComponent<StressVisuals>().UpdateAnimation(3);
             }
         }
         WinTimer -= Time.deltaTime;
-        if (WinTimer <= 0)
+        if (WinTimer <= 0 && !loseActivated)
         {
             //Time.timeScale = 0;
             //print("YIPEE YOU WIN");
