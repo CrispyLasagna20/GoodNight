@@ -14,6 +14,9 @@ public class AnomalyFunction : MonoBehaviour
     private int lowMax;
     private int midMax;
     private int highMax;
+    //confirmation
+    [SerializeField] private GameObject confirmationPrompt;
+    [SerializeField] private string anomalyName;
 
     void Start()
     {
@@ -61,7 +64,8 @@ public class AnomalyFunction : MonoBehaviour
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[0];
             this.transform.parent.GetComponent<AnomalyManager>().UpdateCount(-1);
-            SetupTimer(Random.Range(5.0f, 20.0f));
+            confirmationPrompt.GetComponent<ConfirmationPrompt>().RunConfirm(anomalyName);
+            SetupTimer(Random.Range(7.0f, 20.0f));
         }
     }
 

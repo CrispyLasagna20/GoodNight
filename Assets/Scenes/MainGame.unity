@@ -306,6 +306,8 @@ MonoBehaviour:
   - {fileID: 7601323341576661109, guid: cbff2cd08ae8f3f459ced7d9b954ff1a, type: 3}
   - {fileID: -6150475313412599272, guid: dcac46b70040172418ccb7cdae10e152, type: 3}
   - {fileID: 3847398278118694075, guid: ce8ca7b1f1c057b40a982cb1f1ec773d, type: 3}
+  confirmationPrompt: {fileID: 894304704}
+  anomalyName: Table
 --- !u!1 &190121557
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,6 +495,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9d9f260fba1d5e44ebfd4268a5596f9d, type: 3}
   - {fileID: 21300000, guid: 111a54bd5c4052f448539a5e8152f939, type: 3}
   - {fileID: 21300000, guid: 1050ea124ed6615408b495dc139b299e, type: 3}
+  confirmationPrompt: {fileID: 894304704}
+  anomalyName: Fireplace
 --- !u!1 &262938220
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,6 +766,8 @@ MonoBehaviour:
   - {fileID: 6980632622923684949, guid: 3d872c02da0449f4fb10c22e337e478b, type: 3}
   - {fileID: 5020038994462296645, guid: f8b5453669cc50740b60886db90a6db9, type: 3}
   - {fileID: -3560496758847218147, guid: 19c828e6ca01609498a2a19ffb784868, type: 3}
+  confirmationPrompt: {fileID: 894304704}
+  anomalyName: Nightstand
 --- !u!1 &312971457
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,6 +952,8 @@ MonoBehaviour:
   - {fileID: -6449665660316203150, guid: 208c2e048feeae441b891e27ea47f0fd, type: 3}
   - {fileID: -7033090109667211568, guid: 9f10cd80e57db3f4e8b7b8fbfa9035ef, type: 3}
   - {fileID: 6950987115816893403, guid: 3275a3548e41fc24c993c072f769c911, type: 3}
+  confirmationPrompt: {fileID: 894304704}
+  anomalyName: Window
 --- !u!1 &397554775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,6 +1188,8 @@ MonoBehaviour:
   - {fileID: 4660227107899732089, guid: 9fb0b120e5419894b96d6e259a034773, type: 3}
   - {fileID: -8125745670946438341, guid: d43b06e7ca5a5cd4ea90419330bc265d, type: 3}
   - {fileID: 9001088583330810393, guid: 702e2b2d2cfa1a74fbf52bded2c1ed04, type: 3}
+  confirmationPrompt: {fileID: 894304704}
+  anomalyName: Window
 --- !u!1 &465977002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,6 +1343,8 @@ MonoBehaviour:
   - {fileID: -8677035944477083225, guid: d9b3b0a57b172a9459014c5b8c9e2534, type: 3}
   - {fileID: -1586665270457797215, guid: 3a2527b3bfa450d47992be53c661c526, type: 3}
   - {fileID: -3710358660570980651, guid: 735dc6de226ac25489760317ba053178, type: 3}
+  confirmationPrompt: {fileID: 894304704}
+  anomalyName: Picture
 --- !u!4 &544068732
 Transform:
   m_ObjectHideFlags: 0
@@ -1621,7 +1633,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 0000000075fa84b615229508016a90858f6a087e
+  m_ApplyToSortingLayers: 0000000075fa84b615229508016a90858f6a087e9f47e5d2
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1855,6 +1867,8 @@ MonoBehaviour:
   - {fileID: 7880854612407014968, guid: 0c9926b29709a094e9cdb9b9a3730846, type: 3}
   - {fileID: -8110618129505441616, guid: edab0e56d3b6af846bae940fbbeebed6, type: 3}
   - {fileID: 5584153591859326628, guid: bf89e11461359334cac60f32f81447b7, type: 3}
+  confirmationPrompt: {fileID: 894304704}
+  anomalyName: Fireplace
 --- !u!1 &751881271
 GameObject:
   m_ObjectHideFlags: 0
@@ -2045,6 +2059,8 @@ MonoBehaviour:
   - {fileID: -7437894011520933966, guid: 59da39bed43fd304c97009bd84e968c4, type: 3}
   - {fileID: 5812149508342006532, guid: 5e7aa40e7a1520b4680ca5c0904fd136, type: 3}
   - {fileID: 8515899059873843298, guid: b7297da0366027443bae8d2083c44b0a, type: 3}
+  confirmationPrompt: {fileID: 894304704}
+  anomalyName: Bookcase
 --- !u!1 &817471832
 GameObject:
   m_ObjectHideFlags: 0
@@ -2123,7 +2139,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 2114480783
+  m_SortingLayerID: -756725857
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
@@ -2190,8 +2206,9 @@ GameObject:
   - component: {fileID: 894304705}
   - component: {fileID: 894304707}
   - component: {fileID: 894304706}
+  - component: {fileID: 894304708}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Confirmation TMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2230,13 +2247,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Good Night Room
+  m_text: Sample Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2316,6 +2333,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894304704}
   m_CullTransparentMesh: 1
+--- !u!114 &894304708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894304704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994cfd1ea005e1f4ea74b91f211f16aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &1053265676
 GameObject:
   m_ObjectHideFlags: 0
@@ -2777,6 +2806,8 @@ MonoBehaviour:
   - {fileID: -6395740080215621677, guid: 29a1ae9ee1816b944b33620b0afd8799, type: 3}
   - {fileID: 7571010652271936267, guid: 450884340eff4cf44917c51520ab2261, type: 3}
   - {fileID: 5567433755503562202, guid: b0473a558216f324ebc0a4e7c6d44e78, type: 3}
+  confirmationPrompt: {fileID: 894304704}
+  anomalyName: Doorway
 --- !u!1 &1586579251
 GameObject:
   m_ObjectHideFlags: 0
@@ -2967,6 +2998,8 @@ MonoBehaviour:
   - {fileID: 7669334502268652159, guid: a121ecf66be78b34cb4a6a18baa99115, type: 3}
   - {fileID: -8379185470126356264, guid: f0d7599e8963ee842a4b946732594c31, type: 3}
   - {fileID: 7115710267213440526, guid: 44465f04863eebe48ab4d3dcb09482ee, type: 3}
+  confirmationPrompt: {fileID: 894304704}
+  anomalyName: Carpet
 --- !u!1 &1689347371
 GameObject:
   m_ObjectHideFlags: 0
@@ -3157,6 +3190,8 @@ MonoBehaviour:
   - {fileID: -4900519559792472284, guid: c9becf924dcc9a24391907d00960f021, type: 3}
   - {fileID: -5145178211345432079, guid: 7b7b733154e533447a1db8c83194f526, type: 3}
   - {fileID: 1389396426767139163, guid: 2abe4d7a912ec0f48a8054df8ac62a95, type: 3}
+  confirmationPrompt: {fileID: 894304704}
+  anomalyName: Bed
 --- !u!1 &1758377995
 GameObject:
   m_ObjectHideFlags: 0
@@ -3449,6 +3484,8 @@ MonoBehaviour:
   - {fileID: 839674889891407596, guid: c785974ad1d26334986ec76fcdd4e011, type: 3}
   - {fileID: 2268078203674585615, guid: 0d7af3e67a117d541b7ca54314fd2a3e, type: 3}
   - {fileID: 1656034635068812214, guid: e49684d75b8ea9d418c31797bb4bbc71, type: 3}
+  confirmationPrompt: {fileID: 894304704}
+  anomalyName: Dresser
 --- !u!1 &1964288783
 GameObject:
   m_ObjectHideFlags: 0
