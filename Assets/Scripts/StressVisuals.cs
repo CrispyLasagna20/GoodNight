@@ -26,11 +26,6 @@ public class StressVisuals : MonoBehaviour
     private float frameOffset = 0.15f;
     private float frameTimer = 0;
 
-    void Start()
-    {
-        print(animationQueue);
-    }
-
     void Update()
     {
         //runs an animation of stress changes

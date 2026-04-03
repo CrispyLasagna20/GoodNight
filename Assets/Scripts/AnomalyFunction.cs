@@ -65,7 +65,7 @@ public class AnomalyFunction : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().sprite = anomalySprites[0];
             this.transform.parent.GetComponent<AnomalyManager>().UpdateCount(-1);
             confirmationPrompt.GetComponent<ConfirmationPrompt>().RunConfirm(anomalyName);
-            SetupTimer(Random.Range(7.0f, 20.0f));
+            SetupTimer(Random.Range(12.0f, 30.0f));
         }
     }
 

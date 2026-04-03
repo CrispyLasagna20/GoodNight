@@ -14,13 +14,22 @@ public class AnomalyManager : MonoBehaviour
     private int midMax = 8;
     private int highMin = 9;
     [SerializeField] private int globalPenalty = 0;
-    
+
+    //scene sounds
+    [SerializeField] private AudioManager audioReference;
+    private float volume = 0f;
+    private float targetVolume = 0.3f;
+    private float changeRate = 0.0005f;
+    private string[] disturbances = { "breath1", "rawr1", "thump1", "thump2", "thump3", "whisper1" };
+    private float disturbanceTimer = 0;
+    private float disturbanceTimeout;
+
     //win & lose timer
     [SerializeField] private float LoseTimer = 15;
     private bool loseActivated = false;
     private bool runLoseTimer = false;
     [SerializeField] private float WinTimer = 190; //3 mintues + 10 second grace period
-    public GameObject clock;
+    [SerializeField] private GameObject clock;
 
     void Start()
     {
@@ -29,10 +38,27 @@ public class AnomalyManager : MonoBehaviour
             anomalyObjects[i].GetComponent<AnomalyFunction>().SetupTimer(Random.Range(10.0f, 40.0f));
             clock.GetComponent<ClockManager>().ClockUpdate(0);
         }
+        audioReference.PlaySound("darkAmbience1");
+        audioReference.PlaySound("darkAmbience2");
+        disturbanceTimeout = Random.Range(20.0f, 50.0f);
     }
 
     void Update()
     {
+        //adjusts volume of ambience when needed
+        if (volume != targetVolume)
+        {
+            if (volume < targetVolume)
+            {
+                volume += changeRate;
+            }
+            else if (volume > targetVolume)
+            {
+                volume -= changeRate;
+            }
+            audioReference.UpdateVolume("darkAmbience1", volume);
+        }
+        //updates stess when needed
         if (needsUpdate && !loseActivated)
         {
             //changes stress depending on anomaly count
@@ -40,16 +66,19 @@ public class AnomalyManager : MonoBehaviour
             {
                 stress = 0;
                 stressChanged = true;
+                targetVolume = 0.3f;
             }
             else if (stress != 1 && anomalyCount == (midMin - globalPenalty) || anomalyCount == (midMax - globalPenalty))
             {
                 stress = 1;
                 stressChanged = true;
+                targetVolume = 0.7f;
             }
             else if (stress != 2 && anomalyCount == (highMin - globalPenalty))
             {
                 stress = 2;
                 stressChanged = true;
+                targetVolume = 1f;
             }
             //updates all stress if needed
             if (stressChanged)
@@ -62,6 +91,7 @@ public class AnomalyManager : MonoBehaviour
             }
             needsUpdate = false;
         }
+        //counts down lose timer when needed
         if (runLoseTimer)
         {
             LoseTimer -= Time.deltaTime;
@@ -73,6 +103,7 @@ public class AnomalyManager : MonoBehaviour
                 stressVisuals.GetComponent<StressVisuals>().UpdateAnimation(3);
             }
         }
+        //counts down win timer, adjusts clock sprite, and runs win function
         WinTimer -= Time.deltaTime;
         if (WinTimer <= 0 && !loseActivated)
         {
@@ -95,6 +126,17 @@ public class AnomalyManager : MonoBehaviour
             clock.GetComponent<ClockManager>().ClockUpdate(1);
 
         }
+        //periodically plays random disturbance noise
+        disturbanceTimer += Time.deltaTime;
+        if (disturbanceTimer >= disturbanceTimeout)
+        {
+            string temp = disturbances[Random.Range(0, disturbances.Length - 1)];
+            print(temp);
+            audioReference.PlaySoundInSpace(temp, Random.Range(-1, 1));
+            disturbanceTimeout = Random.Range(20.0f, 50.0f);
+            disturbanceTimer = 0;
+        }
+
     }
 
     public void UpdateCount(int count)
