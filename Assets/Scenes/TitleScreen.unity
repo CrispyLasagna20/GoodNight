@@ -702,11 +702,177 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TempSceneChanger
   nextScene: MainGame
+--- !u!1 &1960746774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1960746776}
+  - component: {fileID: 1960746775}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1960746775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960746774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d10914fd265cfa4495432c5ed6c78b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  sounds:
+  - audio: {fileID: 8300000, guid: 933723252055ae847943d6b6aadc1772, type: 3}
+    source: {fileID: 0}
+    name: breath1
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: aa2c28a608b66244d9fded2de0d9d568, type: 3}
+    source: {fileID: 0}
+    name: click1
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: eef3ac31dba274d48a220afb3f8418b0, type: 3}
+    source: {fileID: 0}
+    name: click2
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: 60c19262049a14b4882c9869a5815139, type: 3}
+    source: {fileID: 0}
+    name: darkAmbience1
+    volume: 0
+    pitch: 1
+    loop: 1
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: d55bdd64dcdfac34d806c0bcbd79fe4a, type: 3}
+    source: {fileID: 0}
+    name: darkAmbience2
+    volume: 0.43
+    pitch: 1
+    loop: 1
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: 30c2d8ca79e38d548a4edc17b70e2511, type: 3}
+    source: {fileID: 0}
+    name: clockTick1
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    spatialBlend: 0.8
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: ad9b749d96796c04abff2bfd0e8ee1a1, type: 3}
+    source: {fileID: 0}
+    name: start1
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: ebcc06b19bd91d245bd43fb2aa15a3a7, type: 3}
+    source: {fileID: 0}
+    name: rawr1
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: ad38d2a6444e1e94b9762080d0bf081d, type: 3}
+    source: {fileID: 0}
+    name: thump1
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: 7399927f6d4a0eb4eab9c78e24776728, type: 3}
+    source: {fileID: 0}
+    name: thump2
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: 224b90f0d29ca3346b13b560c0343fb7, type: 3}
+    source: {fileID: 0}
+    name: thump3
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: 61e0998357d449e4cad0505d6115e8bb, type: 3}
+    source: {fileID: 0}
+    name: whisper1
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: b217c9d60953a004782bc009e0313813, type: 3}
+    source: {fileID: 0}
+    name: static1
+    volume: 0
+    pitch: 1
+    loop: 1
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: 2e6f074188722e048a4155c9e7c5d8d0, type: 3}
+    source: {fileID: 0}
+    name: correct1
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: 90ceb7a97fbb9774084da55938a4038f, type: 3}
+    source: {fileID: 0}
+    name: wrong1
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+--- !u!4 &1960746776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960746774}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 545490629}
+  - {fileID: 1960746776}
   - {fileID: 1792956187}
   - {fileID: 1917471317}
   - {fileID: 679813624}

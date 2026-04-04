@@ -4,10 +4,25 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
+
+    //public static AudioManager instance;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
+        //instance = this;
+        /*if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        DontDestroyOnLoad(gameObject);*/
+
         foreach (Sound curSound in sounds)
         {
             curSound.source = gameObject.AddComponent<AudioSource>();

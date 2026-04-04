@@ -156,7 +156,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.07058824, g: 0.121568635, b: 0.078431375, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -372,6 +372,171 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &598421884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 598421886}
+  - component: {fileID: 598421885}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &598421885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598421884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d10914fd265cfa4495432c5ed6c78b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  sounds:
+  - audio: {fileID: 8300000, guid: 933723252055ae847943d6b6aadc1772, type: 3}
+    source: {fileID: 0}
+    name: breath1
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: aa2c28a608b66244d9fded2de0d9d568, type: 3}
+    source: {fileID: 0}
+    name: click1
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: eef3ac31dba274d48a220afb3f8418b0, type: 3}
+    source: {fileID: 0}
+    name: click2
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: 60c19262049a14b4882c9869a5815139, type: 3}
+    source: {fileID: 0}
+    name: darkAmbience1
+    volume: 0
+    pitch: 1
+    loop: 1
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: d55bdd64dcdfac34d806c0bcbd79fe4a, type: 3}
+    source: {fileID: 0}
+    name: darkAmbience2
+    volume: 0.43
+    pitch: 1
+    loop: 1
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: 30c2d8ca79e38d548a4edc17b70e2511, type: 3}
+    source: {fileID: 0}
+    name: clockTick1
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    spatialBlend: 0.8
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: ad9b749d96796c04abff2bfd0e8ee1a1, type: 3}
+    source: {fileID: 0}
+    name: start1
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: ebcc06b19bd91d245bd43fb2aa15a3a7, type: 3}
+    source: {fileID: 0}
+    name: rawr1
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: ad38d2a6444e1e94b9762080d0bf081d, type: 3}
+    source: {fileID: 0}
+    name: thump1
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: 7399927f6d4a0eb4eab9c78e24776728, type: 3}
+    source: {fileID: 0}
+    name: thump2
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: 224b90f0d29ca3346b13b560c0343fb7, type: 3}
+    source: {fileID: 0}
+    name: thump3
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: 61e0998357d449e4cad0505d6115e8bb, type: 3}
+    source: {fileID: 0}
+    name: whisper1
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: b217c9d60953a004782bc009e0313813, type: 3}
+    source: {fileID: 0}
+    name: static1
+    volume: 0
+    pitch: 1
+    loop: 1
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: 2e6f074188722e048a4155c9e7c5d8d0, type: 3}
+    source: {fileID: 0}
+    name: correct1
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: 90ceb7a97fbb9774084da55938a4038f, type: 3}
+    source: {fileID: 0}
+    name: wrong1
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+--- !u!4 &598421886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598421884}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705053292
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,9 +548,9 @@ GameObject:
   - component: {fileID: 705053293}
   - component: {fileID: 705053296}
   - component: {fileID: 705053295}
-  - component: {fileID: 705053294}
+  - component: {fileID: 705053297}
   m_Layer: 5
-  m_Name: Tutorial Text
+  m_Name: Win Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -410,62 +575,6 @@ RectTransform:
   m_AnchoredPosition: {x: 31, y: -20}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &705053294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 705053292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 705053295}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11723206}
-        m_TargetAssemblyTypeName: TempSceneChanger, Assembly-CSharp
-        m_MethodName: ChangeScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &705053295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,24 +595,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You Won
-
-
-    That means you survived 3 whole minutes wooooooooooow
-
-
-    If
-    you want to play this again for some reason interact with the text'
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c45b125a82b79f54aa08dfff2088498c, type: 2}
+  m_sharedMaterial: {fileID: 9110086329752797726, guid: c45b125a82b79f54aa08dfff2088498c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.8745098, g: 0.8745098, b: 0.8745098, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -520,8 +622,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -530,8 +632,8 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_characterHorizontalScale: 1
+  m_characterSpacing: 7
+  m_characterHorizontalScale: 1.05
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -573,6 +675,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705053292}
   m_CullTransparentMesh: 1
+--- !u!114 &705053297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705053292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a38ba16702bc4ee4291334dd62c6d846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoseScreen
+  transitionTimeout: 1
+  waitTimeout: 2
+  phrases:
+  - you braved the night
+  - darkness no longer causes unrest
+  - there is nothing in the darkness
+  - your perception meets reality
+  - peace at last
+  - sleep tight
+  - good night room
+  - z z z
+  audioReference: {fileID: 598421885}
 --- !u!1 &731033243
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,7 +826,8 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 10127901}
   - {fileID: 1730393326}
+  - {fileID: 598421886}
+  - {fileID: 10127901}
   - {fileID: 11723210}
   - {fileID: 731033246}

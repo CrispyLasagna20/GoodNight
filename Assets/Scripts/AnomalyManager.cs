@@ -119,7 +119,9 @@ public class AnomalyManager : MonoBehaviour
                 //Time.timeScale = 0;
                 //print("YOU JUST LOST THE GAME");
                 loseActivated = true;
+                targetVolume = 1f;
                 stressVisuals.GetComponent<StressVisuals>().UpdateAnimation(3);
+
             }
         }
         //counts down win timer, adjusts clock sprite, and runs win function
@@ -128,7 +130,7 @@ public class AnomalyManager : MonoBehaviour
         {
             //Time.timeScale = 0;
             //print("YIPEE YOU WIN");
-            GameManager.instance.ChangeSceneTo("WinScreen");
+            GameManager.instance.ChangeSceneTo("WinAnim");
         }
         else if (WinTimer < 60)
         {

@@ -308,6 +308,7 @@ MonoBehaviour:
   - {fileID: 3847398278118694075, guid: ce8ca7b1f1c057b40a982cb1f1ec773d, type: 3}
   confirmationPrompt: {fileID: 894304704}
   anomalyName: table
+  audioReference: {fileID: 193374758}
 --- !u!1 &190121557
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +498,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1050ea124ed6615408b495dc139b299e, type: 3}
   confirmationPrompt: {fileID: 894304704}
   anomalyName: fireplace
+  audioReference: {fileID: 193374758}
 --- !u!1 &193374754
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,22 +552,6 @@ MonoBehaviour:
     loop: 0
     spatialBlend: 0
     stereoPan: 0
-  - audio: {fileID: 8300000, guid: aa2c28a608b66244d9fded2de0d9d568, type: 3}
-    source: {fileID: 0}
-    name: click1
-    volume: 1
-    pitch: 1
-    loop: 0
-    spatialBlend: 0
-    stereoPan: 0
-  - audio: {fileID: 8300000, guid: eef3ac31dba274d48a220afb3f8418b0, type: 3}
-    source: {fileID: 0}
-    name: click2
-    volume: 1
-    pitch: 1
-    loop: 0
-    spatialBlend: 0
-    stereoPan: 0
   - audio: {fileID: 8300000, guid: 60c19262049a14b4882c9869a5815139, type: 3}
     source: {fileID: 0}
     name: darkAmbience1
@@ -589,14 +575,6 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     spatialBlend: 0.8
-    stereoPan: 0
-  - audio: {fileID: 8300000, guid: ad9b749d96796c04abff2bfd0e8ee1a1, type: 3}
-    source: {fileID: 0}
-    name: start1
-    volume: 1
-    pitch: 1
-    loop: 0
-    spatialBlend: 0
     stereoPan: 0
   - audio: {fileID: 8300000, guid: ebcc06b19bd91d245bd43fb2aa15a3a7, type: 3}
     source: {fileID: 0}
@@ -644,6 +622,22 @@ MonoBehaviour:
     volume: 0
     pitch: 1
     loop: 1
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: 2e6f074188722e048a4155c9e7c5d8d0, type: 3}
+    source: {fileID: 0}
+    name: correct1
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    stereoPan: 0
+  - audio: {fileID: 8300000, guid: 90ceb7a97fbb9774084da55938a4038f, type: 3}
+    source: {fileID: 0}
+    name: wrong1
+    volume: 0.5
+    pitch: 1
+    loop: 0
     spatialBlend: 0
     stereoPan: 0
 --- !u!1 &262938220
@@ -917,6 +911,7 @@ MonoBehaviour:
   - {fileID: -3560496758847218147, guid: 19c828e6ca01609498a2a19ffb784868, type: 3}
   confirmationPrompt: {fileID: 894304704}
   anomalyName: nightstand
+  audioReference: {fileID: 193374758}
 --- !u!1 &312971457
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,6 +1098,7 @@ MonoBehaviour:
   - {fileID: 6950987115816893403, guid: 3275a3548e41fc24c993c072f769c911, type: 3}
   confirmationPrompt: {fileID: 894304704}
   anomalyName: curtain
+  audioReference: {fileID: 193374758}
 --- !u!1 &397554775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,6 +1335,7 @@ MonoBehaviour:
   - {fileID: 9001088583330810393, guid: 702e2b2d2cfa1a74fbf52bded2c1ed04, type: 3}
   confirmationPrompt: {fileID: 894304704}
   anomalyName: window
+  audioReference: {fileID: 193374758}
 --- !u!1 &465977002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,6 +1492,7 @@ MonoBehaviour:
   - {fileID: -3710358660570980651, guid: 735dc6de226ac25489760317ba053178, type: 3}
   confirmationPrompt: {fileID: 894304704}
   anomalyName: picture
+  audioReference: {fileID: 193374758}
 --- !u!4 &544068732
 Transform:
   m_ObjectHideFlags: 0
@@ -2019,6 +2017,7 @@ MonoBehaviour:
   - {fileID: 5584153591859326628, guid: bf89e11461359334cac60f32f81447b7, type: 3}
   confirmationPrompt: {fileID: 894304704}
   anomalyName: hearth
+  audioReference: {fileID: 193374758}
 --- !u!1 &751881271
 GameObject:
   m_ObjectHideFlags: 0
@@ -2211,6 +2210,7 @@ MonoBehaviour:
   - {fileID: 8515899059873843298, guid: b7297da0366027443bae8d2083c44b0a, type: 3}
   confirmationPrompt: {fileID: 894304704}
   anomalyName: bookcase
+  audioReference: {fileID: 193374758}
 --- !u!1 &817471832
 GameObject:
   m_ObjectHideFlags: 0
@@ -2403,7 +2403,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c45b125a82b79f54aa08dfff2088498c, type: 2}
   m_sharedMaterial: {fileID: 9110086329752797726, guid: c45b125a82b79f54aa08dfff2088498c, type: 2}
@@ -2959,6 +2959,7 @@ MonoBehaviour:
   - {fileID: 5567433755503562202, guid: b0473a558216f324ebc0a4e7c6d44e78, type: 3}
   confirmationPrompt: {fileID: 894304704}
   anomalyName: doorway
+  audioReference: {fileID: 193374758}
 --- !u!1 &1586579251
 GameObject:
   m_ObjectHideFlags: 0
@@ -3151,6 +3152,7 @@ MonoBehaviour:
   - {fileID: 7115710267213440526, guid: 44465f04863eebe48ab4d3dcb09482ee, type: 3}
   confirmationPrompt: {fileID: 894304704}
   anomalyName: carpet
+  audioReference: {fileID: 193374758}
 --- !u!1 &1689347371
 GameObject:
   m_ObjectHideFlags: 0
@@ -3343,6 +3345,7 @@ MonoBehaviour:
   - {fileID: 1389396426767139163, guid: 2abe4d7a912ec0f48a8054df8ac62a95, type: 3}
   confirmationPrompt: {fileID: 894304704}
   anomalyName: bed
+  audioReference: {fileID: 193374758}
 --- !u!1 &1758377995
 GameObject:
   m_ObjectHideFlags: 0
@@ -3637,6 +3640,7 @@ MonoBehaviour:
   - {fileID: 1656034635068812214, guid: e49684d75b8ea9d418c31797bb4bbc71, type: 3}
   confirmationPrompt: {fileID: 894304704}
   anomalyName: dresser
+  audioReference: {fileID: 193374758}
 --- !u!1 &1964288783
 GameObject:
   m_ObjectHideFlags: 0

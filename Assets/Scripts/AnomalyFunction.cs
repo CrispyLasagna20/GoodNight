@@ -59,8 +59,8 @@ public class AnomalyFunction : MonoBehaviour
         if (canSpawn)
         {
             this.transform.parent.GetComponent<AnomalyManager>().UpdatePenalty(1);
-            //audioReference.UpdatePitch("", Random.Range(0.95f, 1.05f);
-            //audioReference.PlaySound("");
+            audioReference.UpdatePitch("wrong1", Random.Range(0.999f, 1.001f));
+            audioReference.PlaySound("wrong1");
         }
 
         //resets anomaly if present
@@ -70,8 +70,8 @@ public class AnomalyFunction : MonoBehaviour
             this.transform.parent.GetComponent<AnomalyManager>().UpdateCount(-1);
             confirmationPrompt.GetComponent<ConfirmationPrompt>().RunConfirm(anomalyName);
             SetupTimer(Random.Range(12.0f, 30.0f));
-            //audioReference.UpdatePitch("", Random.Range(0.95f, 1.05f);
-            //audioReference.PlaySound("");
+            audioReference.UpdatePitch("wrong1", Random.Range(0.999f, 1.001f));
+            audioReference.PlaySound("correct1");
         }
     }
 
