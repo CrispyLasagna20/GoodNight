@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 63dde5de34cb17244a7e201dda7838c4
+guid: 4fa11bd93ea591b4cabed0801cd7f5e6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 477360834917805538
-    second: GoodNightRoom_0
+      213: 2530564911472380330
+    second: button_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GoodNightRoom_0
+      name: button_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 400
-        height: 208
+        x: 5
+        y: 16
+        width: 118
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2eda5f2762def9600800000000000000
-      internalID: 477360834917805538
+      spriteID: aa90165216f5e1320800000000000000
+      internalID: 2530564911472380330
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GoodNightRoom_0: 477360834917805538
+      button_0: 2530564911472380330
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
