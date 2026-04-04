@@ -30,13 +30,14 @@ public class AudioManager : MonoBehaviour
             }
         }
     }
-    public void PlaySoundInSpace(string name, float balance)
+    public void PlaySoundRandomly(string name)
     {
         foreach (Sound curSound in sounds)
         {
             if (curSound.name == name)
             {
-                curSound.source.panStereo = balance;
+                curSound.source.panStereo = Random.Range(-1f, 1f);
+                curSound.source.pitch = Random.Range(0.8f, 0.12f);
                 curSound.source.Play();
             }
         }
@@ -49,6 +50,16 @@ public class AudioManager : MonoBehaviour
             if (curSound.name == name)
             {
                 curSound.source.volume = volume;
+            }
+        }
+    }
+    public void UpdatePitch(string name, float pitch)
+    {
+        foreach (Sound curSound in sounds)
+        {
+            if (curSound.name == name)
+            {
+                curSound.source.pitch = pitch;
             }
         }
     }

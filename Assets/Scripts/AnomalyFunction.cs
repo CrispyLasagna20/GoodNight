@@ -17,6 +17,8 @@ public class AnomalyFunction : MonoBehaviour
     //confirmation
     [SerializeField] private GameObject confirmationPrompt;
     [SerializeField] private string anomalyName;
+    //sounds
+    [SerializeField] private AudioManager audioReference;
 
     void Start()
     {
@@ -57,6 +59,8 @@ public class AnomalyFunction : MonoBehaviour
         if (canSpawn)
         {
             this.transform.parent.GetComponent<AnomalyManager>().UpdatePenalty(1);
+            //audioReference.UpdatePitch("", Random.Range(0.95f, 1.05f);
+            //audioReference.PlaySound("");
         }
 
         //resets anomaly if present
@@ -66,6 +70,8 @@ public class AnomalyFunction : MonoBehaviour
             this.transform.parent.GetComponent<AnomalyManager>().UpdateCount(-1);
             confirmationPrompt.GetComponent<ConfirmationPrompt>().RunConfirm(anomalyName);
             SetupTimer(Random.Range(12.0f, 30.0f));
+            //audioReference.UpdatePitch("", Random.Range(0.95f, 1.05f);
+            //audioReference.PlaySound("");
         }
     }
 
