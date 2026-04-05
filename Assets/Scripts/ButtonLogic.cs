@@ -2,10 +2,9 @@ using UnityEngine;
 
 public class ButtonLogic : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private Sprite[] buttons;
     [SerializeField] private AudioManager audioReference;
-    private string[] clicks = {"click1", "click2"};
+    //private string[] clicks = {"click1", "click2"};
     private bool buttonPressed = false;
     private float releaseTimer = 0f;
     private float releaseTimeout = 0.2f;
@@ -27,9 +26,10 @@ public class ButtonLogic : MonoBehaviour
 
     public void OnMouseDown()
     {
-        string curClick = clicks[Random.Range(0, 1)];
-        audioReference.UpdatePitch(curClick, Random.Range(0.9f, 1.1f));
-        audioReference.PlaySound(curClick);
+        //string curClick = clicks[Random.Range(0, 1)];
+        //audioReference.UpdatePitch(curClick, Random.Range(0.9f, 1.1f));
+        //audioReference.PlaySound(curClick);
+        audioReference.PlaySound("start1");
         gameObject.GetComponent<SpriteRenderer>().sprite = buttons[1];
         buttonPressed = true; 
     }

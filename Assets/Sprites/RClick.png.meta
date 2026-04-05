@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 347b687bb9b0a9e4d909a39ebf6891eb
+guid: d522bb4f1c3e3c3438bcb3585daa2587
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6303702290112116481
-    second: EmptyGoodNightRoom_0
+      213: 1948647617927281163
+    second: RClick_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EmptyGoodNightRoom_0
+      name: RClick_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 400
-        height: 208
+        width: 14
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 107f2fb95df3b7750800000000000000
-      internalID: 6303702290112116481
+      spriteID: b0a77f22facfa0b10800000000000000
+      internalID: 1948647617927281163
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e0010849fe0a7ab43a03fa6571e9411d
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      EmptyGoodNightRoom_0: 6303702290112116481
+      RClick_0: 1948647617927281163
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
