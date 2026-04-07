@@ -47,7 +47,6 @@ public class TutorialText : MonoBehaviour
         {
             printFinished = true;
             objectReference.MakeVisible();
-            print(curPhrase + " " + (phrases.Length-1));
         }
         //prints text at certain rate if wait over and more text needed
         if (!printFinished && waitFinished)
